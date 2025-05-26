@@ -31,8 +31,6 @@ function VipDetail() {
     }
   }
 
-  console.log(vip)
-
   return (
     <div onClick={closeModal} className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
       <div onClick={(e) => e.stopPropagation()} className="space-y-4 bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
