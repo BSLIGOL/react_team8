@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+@import "tailwindcss";
+
+/* 여기에 Tailwind로 대체할 수 없는 커스텀 스타일만 추가하세요 */
+@layer base {
+    html {
+        font-family: 'Noto Sans KR','Noto Sans', sans-serif;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+}
+
