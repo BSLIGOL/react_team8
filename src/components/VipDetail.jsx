@@ -9,15 +9,13 @@ function VipDetail() {
 
   const vip = vips.find((vip) => vip.id === parseInt(id));
 
+  if(vip === undefined) return null;
+  
   useEffect(() => {
     if (!vip) {
       navigate('/');
     }
-  }, [vip, navigate]);
-
-  if (!vip) {
-    return null;
-  }
+  }, [navigate]);
 
   const closeModal = () => {
     navigate('/');

@@ -20,6 +20,10 @@ function AddForm() {
         const {name, value} = e.target;
         if(name === 'company.name') {
             setForm((prev) => ({
+                // prev는 이전 상태를 의미
+                // React는 setForm에 함수가 전달되면, 이 함수를 실행할 때 현재 상태의 
+                // 가장 최신 스냅샷을 그 함수의 첫 번째 인자로 넣어줌
+                // 따라서 prev는 항상 최신 상태를 가리키게 됨
                 ...prev,
                 company: {
                     ...prev.company,
@@ -30,9 +34,32 @@ function AddForm() {
             setForm((prev) => ({
                 ...prev,
                 [name]:value
+                // 대괄호를 입력하지 않으면 name은 단순히 문자열 리터럴로 인식 됨
+                // 계산된 속성 이름(Computed Property Name), 객체의 속성을 동적으로 지정
             }))
         }
     }
+
+    // 동작은 하는데 초보자용
+    // const onChange = (e) => {
+    //     const {name, value} = e.target;
+    //     if(name === 'company.name') {
+    //         setForm({
+    //             ...form,
+    //             company: {
+    //                 ...form.company,
+    //                 name:value
+    //             }
+    //         })
+    //     } else {
+    //         setForm({
+    //             ...form,
+    //             [name]:value
+    //             // 대괄호를 입력하지 않으면 name은 단순히 문자열 리터럴로 인식 됨
+    //             // 계산된 속성 이름(Computed Property Name), 객체의 속성을 동적으로 지정
+    //         })
+    //     }
+    // }
 
     const onSubmit = (e) => {
         e.preventDefault()

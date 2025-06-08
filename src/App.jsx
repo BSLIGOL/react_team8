@@ -15,8 +15,8 @@ function App() {
               <Route path="/" element={<VipList />}>
                 <Route path=":id" element={<VipDetail />} />
               </Route>
-              <Route path="/new" element={<AddForm />} />
               <Route path='edit/:id' element={<EditForm />} />
+              <Route path="/new" element={<AddForm />} />
             </Routes>
         </VipProvider>
       </BrowserRouter>

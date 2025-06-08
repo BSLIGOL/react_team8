@@ -24,7 +24,7 @@ function VipList() {
       <div className="border border-gray-300 rounded-lg overflow-hidden shadow-sm bg-white">
         <input 
           type="text" 
-          placeholder="검색" 
+          placeholder="닉네임으로 검색" 
           value={search} 
           onChange={onChangeSearch} 
           className="w-full px-4 py-2 focus:outline-none"
@@ -32,13 +32,13 @@ function VipList() {
       </div>
 
       <div className="bg-blue-500 text-white p-8 rounded-lg">
-        <ul className="list-none space-y-2 p-4">
+        <ul className="list-none space-y-2 my-4">
           {getFilterData().map((vip) => (
-            <li className="p-3 border border-gray-200 rounded hover:bg-gray-100 transition" key={vip.id}>
+            <li className="p-3  border-gray-300 border-2 rounded-2xl hover:bg-gray-400 transition" key={vip.id}>
               <Link 
                 to={`./${vip.id}`}
               >
-                {vip.username}
+                  {vip.username}
               </Link>
             </li>
           ))}
